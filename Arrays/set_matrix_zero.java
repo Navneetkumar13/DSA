@@ -1,5 +1,12 @@
 // Problem Statement: Given a matrix if an element in the matrix is 0 then you will have to set its entire column and row to 0 and then return the matrix.
 
+/*
+Approach: 
+1> Consider an extra imaginary row on top and an extra col on the left side.
+2> Traverse through the matrix and if you find a zero then mark that extra row and col as 0.
+3> You need not take extra row and col. For this purpose use the 1st row and 1st col to mark that as 0 and take an extra integer or boolean to keep the rows and col from overlapping.
+4> After that run a loop again to traverse through each element and keep a check on the imaginary row and col for marked 0's. and change the value of the field accordingly. 
+*/
 
 class Solution {
     public void setZeroes(int[][] matrix) {
